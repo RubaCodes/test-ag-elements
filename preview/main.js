@@ -9,7 +9,7 @@ button.addEventListener("click", () => {
             isOpen = !isOpen;
         });
         container.appendChild(popup);
-        popup.message = "messaggio di evento"
+        popup.message = "messaggio in input come property html"
     }
     isOpen = true
 })

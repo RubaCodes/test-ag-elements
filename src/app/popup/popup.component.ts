@@ -11,7 +11,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     trigger('state', [
       state('opened', style({ transform: 'translateY(0%)' })),
       state('void, closed', style({ transform: 'translateY(100%)', opacity: 0 })),
-      transition('* => *', animate('100ms ease-in')),
+      transition('* => *', animate('300ms ease-in')),
     ])
   ],
   styles: [`
@@ -56,13 +56,13 @@ export class PopupComponent {
     this.closed.emit(true);
     const event = new CustomEvent('my-popup', {
       detail: {
-          closed: true
+        closed: true
       }
     });
     this.elRef.nativeElement.dispatchEvent(event);
   }
-  simpleClosePupup(){
-    this.state ='closed'
+  simpleClosePupup() {
+    this.state = 'closed'
     this.closed.emit(true);
   }
 }
